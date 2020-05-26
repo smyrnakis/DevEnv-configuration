@@ -29,7 +29,7 @@ Install-Module oh-my-posh -Scope CurrentUser
 ```
 ``` ps1
 Set-Prompt
-Set-Theme Agnoster
+Set-Theme Paradox
 ```
 
 #### Configure Powershell PROFILE
@@ -43,6 +43,9 @@ Import-Module posh-git
 Import-Module oh-my-posh
 Set-Theme Paradox
 ```
+
+#### Configure ConEmu
+Settings --> Fonts : Meslo
 
 <br>
 
