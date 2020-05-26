@@ -32,6 +32,27 @@ Set-Prompt
 Set-Theme Paradox
 ```
 
+To see the theme settings, use:
+``` ps1
+$ThemeSettings
+```
+
+To see colors and theme colors, use:
+``` ps1
+Show-ThemeColors
+Show-Colors
+```
+
+To set the branch symbol, use:
+``` ps1
+$ThemeSettings.GitSymbols.BranchSymbol = [char]::ConvertFromUtf32(0xE0A0)
+```
+
+Hide your `username@domain` when not in a virtual machine for the Agnoster, Fish, Honukai, Paradox and Sorin themes:
+``` ps1
+$DefaultUser = 'username'
+```
+
 #### Configure Powershell PROFILE
 ``` ps1
 if (!(Test-Path -Path $PROFILE )) { New-Item -Type File -Path $PROFILE -Force }
