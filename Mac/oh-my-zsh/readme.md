@@ -1,2 +1,3 @@
-##Location
+## Location
+
 ~/.zshrc
