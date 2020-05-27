@@ -98,19 +98,19 @@ choco install vim
 ### > Mac
 
 ## Cheatsheet
-`w`: next word
-`b`: previous word
-`gg`: go to the top of the file
-`G`: go to the bottom of the file
-`:%d`: delete every line
-`=G`: fix indentation in all document (only if cursor is moved on top)
-`S`: start writing on a line at correct indentation
-`>` `<`: indent/unindent multiple lines (in visual line mode)
-`>>` `<<`: indent/unindent a line
-`:tabnew` creates a new tab
-`gt` go to next tab
-`gT` go to previous tab
-`:tabo` close all other tabs besides the active one
+`w`: next word<br>
+`b`: previous word<br>
+`gg`: go to the top of the file<br>
+`G`: go to the bottom of the file<br>
+`:%d`: delete every line<br>
+`=G`: fix indentation in all document (only if cursor is moved on top)<br>
+`S`: start writing on a line at correct indentation<br>
+`>` `<`: indent/unindent multiple lines (in visual line mode)<br>
+`>>` `<<`: indent/unindent a line<br>
+`:tabnew` creates a new tab<br>
+`gt` go to next tab<br>
+`gT` go to previous tab<br>
+`:tabo` close all other tabs besides the active one<br>
 
 * https://www.freecodecamp.org/news/7-vim-tips-that-changed-my-life/
 
