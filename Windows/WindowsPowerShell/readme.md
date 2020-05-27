@@ -1,0 +1,2 @@
+##Location
+%USERPROFILE%/Documents/WindowsPowerShell

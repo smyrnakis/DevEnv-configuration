@@ -55,7 +55,23 @@ if (Test-Path($ChocolateyProfile)) {
 }
 
 # Aliases
+# cd to C:\Git directory
 function Cd-Git {
-	Set-Location -Path C:\Git
+  Set-Location -Path C:\Git
 }
 Set-Alias cdgit Cd-Git
+
+# equivalent to unix 'ls -la' (list files including hidden ones)
+function ls-la {
+  param([string]$_)
+  Get-ChildItem -Force $_
+}
+Set-Alias lsla ls-la
+
+# equivalent to unix 'touch'
+function New-Item-File {
+  param([string]$_)
+  # New-Item -Itemtype File -Path $_ -Force
+  echo $null >> $_
+}
+Set-Alias touch New-Item-File

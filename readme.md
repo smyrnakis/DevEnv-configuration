@@ -1,11 +1,13 @@
 # General info
-## Windows
-https://github.com/JanDeDobbeleer/oh-my-posh
 
-## Mac
-https://github.com/ohmyzsh/ohmyzsh
-https://medium.com/swlh/power-up-your-terminal-using-oh-my-zsh-iterm2-c5a03f73a9fb
-https://medium.com/ayuth/iterm2-zsh-oh-my-zsh-the-most-power-full-of-terminal-on-macos-bdb2823fb04c
+Based on work and code from various projects:
+
+* https://github.com/JanDeDobbeleer/oh-my-posh
+* https://gist.github.com/JanDeDobbeleer/71c9f1361a562f337b855b75d7bbfd28
+* https://github.com/ryanoasis/nerd-fonts
+* https://github.com/ohmyzsh/ohmyzsh
+* https://medium.com/swlh/power-up-your-terminal-using-oh-my-zsh-iterm2-c5a03f73a9fb
+* https://medium.com/ayuth/iterm2-zsh-oh-my-zsh-the-most-power-full-of-terminal-on-macos-bdb2823fb04c
 
 <br>
 
@@ -23,6 +25,7 @@ choco install microsoft-windows-terminal
 ```
 
 ### Configure Powershell
+Installation of [posh-git](https://dahlbyk.github.io/posh-git/) and [oh-my-posh](https://pecigonzalo.github.io/Oh-My-Posh/).
 ``` ps1
 Install-Module posh-git -Scope CurrentUser
 Install-Module oh-my-posh -Scope CurrentUser
@@ -58,11 +61,17 @@ $DefaultUser = 'username'
 if (!(Test-Path -Path $PROFILE )) { New-Item -Type File -Path $PROFILE -Force }
 notepad $PROFILE
 ```
+
 Add the bellow in `$PROFILE`:
 ``` ps1
 Import-Module posh-git
 Import-Module oh-my-posh
 Set-Theme Paradox
+```
+
+To reload Powershell profile, run:
+``` ps1
+. $PROFILE
 ```
 
 #### Configure ConEmu
@@ -82,8 +91,36 @@ https://github.com/zsh-users/zsh-autosuggestions
 ## Installation
 ### > Windows
 
+``` ps1
+choco install vim
+```
 
 ### > Mac
+
+## Cheatsheet
+`w`: next word
+`b`: previous word
+`gg`: go to the top of the file
+`G`: go to the bottom of the file
+`:%d`: delete every line
+`=G`: fix indentation in all document (only if cursor is moved on top)
+`S`: start writing on a line at correct indentation
+`>` `<`: indent/unindent multiple lines (in visual line mode)
+`>>` `<<`: indent/unindent a line
+`:tabnew` creates a new tab
+`gt` go to next tab
+`gT` go to previous tab
+`:tabo` close all other tabs besides the active one
+
+* https://www.freecodecamp.org/news/7-vim-tips-that-changed-my-life/
+
+## Plugins
+
+* [vim-plug](https://github.com/junegunn/vim-plug) plugin manager
+* [https://vimawesome.com/](https://vimawesome.com/) collection of Vim plugins
+* [vim-fugitive](https://github.com/tpope/vim-fugitive) git plugin for Vim
+* [auto-pairs](https://github.com/jiangmiao/auto-pairs) insert or delete brackets, parens, quotes in pair
+* https://vimawesome.com/
 
 <br>
 

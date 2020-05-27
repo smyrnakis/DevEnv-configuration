@@ -1,0 +1,2 @@
+##Location
+$HOME/_vimrc
