@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2020-05-26 22:56:15" build="191012">
-			<value name="StartType" type="hex" data="02"/>
+		<key name=".Vanilla" modified="2020-05-28 11:24:08" build="191012">
+			<value name="StartType" type="hex" data="03"/>
 			<value name="CmdLine" type="string" data=""/>
 			<value name="StartTasksFile" type="string" data=""/>
 			<value name="StartTasksName" type="string" data="{Shells::PowerShell}"/>
@@ -51,8 +51,8 @@
 			<value name="ExtendFontNormalIdx" type="hex" data="01"/>
 			<value name="ExtendFontBoldIdx" type="hex" data="0C"/>
 			<value name="ExtendFontItalicIdx" type="hex" data="0D"/>
-			<value name="CursorTypeActive" type="dword" data="000232c1"/>
-			<value name="CursorTypeInactive" type="dword" data="00823281"/>
+			<value name="CursorTypeActive" type="dword" data="000215c0"/>
+			<value name="CursorTypeInactive" type="dword" data="00821580"/>
 			<value name="ClipboardDetectLineEnd" type="hex" data="01"/>
 			<value name="ClipboardBashMargin" type="hex" data="00"/>
 			<value name="ClipboardTrimTrailing" type="hex" data="02"/>
@@ -65,7 +65,7 @@
 			<value name="TrueColorerSupport" type="hex" data="01"/>
 			<value name="FadeInactive" type="hex" data="01"/>
 			<value name="FadeInactiveLow" type="hex" data="00"/>
-			<value name="FadeInactiveHigh" type="hex" data="D0"/>
+			<value name="FadeInactiveHigh" type="hex" data="64"/>
 			<value name="ConVisible" type="hex" data="00"/>
 			<value name="UseInjects" type="hex" data="01"/>
 			<value name="SetDefaultTerminal" type="hex" data="00"/>
@@ -78,7 +78,7 @@
 			<value name="DefaultTerminalConfirm" type="hex" data="01"/>
 			<value name="DefaultTerminalApps" type="string" data="explorer.exe"/>
 			<value name="ProcessAnsi" type="hex" data="01"/>
-			<value name="AnsiLog" type="hex" data="00"/>
+			<value name="AnsiLog" type="hex" data="01"/>
 			<value name="AnsiLogPath" type="string" data="%ConEmuDir%\Logs\"/>
 			<value name="ProcessNewConArg" type="hex" data="01"/>
 			<value name="ProcessCmdStart" type="hex" data="01"/>
@@ -88,8 +88,8 @@
 			<value name="StoreTaskbarCommands" type="hex" data="00"/>
 			<value name="SaveCmdHistory" type="hex" data="01"/>
 			<value name="CmdLineHistory" type="multi">
-				<line data="{Bash::bash}"/>
 				<line data="{Shells::PowerShell}"/>
+				<line data="{Bash::bash}"/>
 				<line data="{Editor::Atom}"/>
 				<line data="{Tests::Show ANSI colors}"/>
 				<line data="{Shells::PowerShell (Admin)}"/>
@@ -101,8 +101,8 @@
 			<value name="Multi" type="hex" data="01"/>
 			<value name="Multi.ShowButtons" type="hex" data="00"/>
 			<value name="Multi.ShowSearch" type="hex" data="00"/>
-			<value name="Multi.NumberInCaption" type="hex" data="00"/>
-			<value name="Multi.CloseConfirmFlags" type="hex" data="04"/>
+			<value name="Multi.NumberInCaption" type="hex" data="01"/>
+			<value name="Multi.CloseConfirmFlags" type="hex" data="05"/>
 			<value name="Multi.NewConfirm" type="hex" data="00"/>
 			<value name="Multi.DupConfirm" type="hex" data="01"/>
 			<value name="Multi.DetachConfirm" type="hex" data="01"/>
@@ -110,7 +110,7 @@
 			<value name="Multi.UseNumbers" type="hex" data="01"/>
 			<value name="Multi.UseWinTab" type="hex" data="01"/>
 			<value name="Multi.AutoCreate" type="hex" data="00"/>
-			<value name="Multi.LeaveOnClose" type="hex" data="00"/>
+			<value name="Multi.LeaveOnClose" type="hex" data="02"/>
 			<value name="Multi.HideOnClose" type="hex" data="00"/>
 			<value name="Multi.MinByEsc" type="hex" data="02"/>
 			<value name="MapShiftEscToEsc" type="hex" data="01"/>
@@ -149,8 +149,8 @@
 			<value name="ConWnd Width" type="dword" data="00000070"/>
 			<value name="ConWnd Height" type="dword" data="00000027"/>
 			<value name="Cascaded" type="hex" data="00"/>
-			<value name="ConWnd X" type="long" data="926"/>
-			<value name="ConWnd Y" type="long" data="94"/>
+			<value name="ConWnd X" type="long" data="940"/>
+			<value name="ConWnd Y" type="long" data="108"/>
 			<value name="16bit Height" type="ulong" data="0"/>
 			<value name="AutoSaveSizePos" type="hex" data="01"/>
 			<value name="IntegralSize" type="hex" data="00"/>
@@ -159,7 +159,7 @@
 			<value name="HideCaption" type="hex" data="00"/>
 			<value name="HideChildCaption" type="hex" data="01"/>
 			<value name="FocusInChildWindows" type="hex" data="01"/>
-			<value name="HideCaptionAlways" type="hex" data="01"/>
+			<value name="HideCaptionAlways" type="hex" data="00"/>
 			<value name="HideCaptionAlwaysFrame" type="hex" data="00"/>
 			<value name="HideCaptionAlwaysDelay" type="ulong" data="2000"/>
 			<value name="HideCaptionAlwaysDisappear" type="ulong" data="2000"/>
@@ -168,7 +168,7 @@
 			<value name="ConsoleFontName" type="string" data="Lucida Console"/>
 			<value name="ConsoleFontWidth" type="long" data="3"/>
 			<value name="ConsoleFontHeight" type="long" data="5"/>
-			<value name="DefaultBufferHeight" type="long" data="1000"/>
+			<value name="DefaultBufferHeight" type="long" data="32766"/>
 			<value name="AutoBufferHeight" type="hex" data="01"/>
 			<value name="UseScrollLock" type="hex" data="01"/>
 			<value name="CmdOutputCP" type="long" data="0"/>
@@ -309,21 +309,21 @@
 			<value name="TabFontHeight" type="long" data="12"/>
 			<value name="SaveAllEditors" type="string" data=""/>
 			<value name="ToolbarAddSpace" type="long" data="0"/>
-			<value name="TabConsole" type="string" data="&lt;%c&gt; %d"/>
+			<value name="TabConsole" type="string" data="#%c %d"/>
 			<value name="TabModifiedSuffix" type="string" data="[*]"/>
 			<value name="TabSkipWords" type="string" data="Administrator:|Администратор:"/>
 			<value name="TabPanels" type="string" data="&lt;%c&gt; %s"/>
 			<value name="TabEditor" type="string" data="&lt;%c.%i&gt;{%s}"/>
 			<value name="TabEditorModified" type="string" data="&lt;%c.%i&gt;[%s] *"/>
 			<value name="TabViewer" type="string" data="&lt;%c.%i&gt;[%s]"/>
-			<value name="TabLenMax" type="ulong" data="20"/>
+			<value name="TabLenMax" type="ulong" data="30"/>
 			<value name="AdminTitleSuffix" type="string" data=" (Admin)"/>
-			<value name="AdminShowShield" type="hex" data="03"/>
+			<value name="AdminShowShield" type="hex" data="01"/>
 			<value name="HideInactiveConsoleTabs" type="hex" data="00"/>
 			<value name="ShowFarWindows" type="hex" data="01"/>
 			<value name="TryToCenter" type="hex" data="01"/>
 			<value name="CenterConsolePad" type="ulong" data="5"/>
-			<value name="ShowScrollbar" type="hex" data="00"/>
+			<value name="ShowScrollbar" type="hex" data="02"/>
 			<value name="ScrollBarAppearDelay" type="ulong" data="100"/>
 			<value name="ScrollBarDisappearDelay" type="ulong" data="1000"/>
 			<value name="IconID" type="ulong" data="1"/>
@@ -374,8 +374,8 @@
 			<value name="PanView.RestoreOnStartup" type="hex" data="00"/>
 			<value name="Update.VerLocation" type="string" data=""/>
 			<value name="Update.CheckOnStartup" type="hex" data="01"/>
-			<value name="Update.CheckHourly" type="hex" data="00"/>
-			<value name="Update.ConfirmDownload" type="hex" data="01"/>
+			<value name="Update.CheckHourly" type="hex" data="01"/>
+			<value name="Update.ConfirmDownload" type="hex" data="00"/>
 			<value name="Update.UseBuilds" type="hex" data="03"/>
 			<value name="Update.InetTool" type="hex" data="00"/>
 			<value name="Update.InetToolCmd" type="string" data=""/>
@@ -587,9 +587,9 @@
 			</key>
 			<key name="Tasks" modified="2016-04-29 09:13:16" build="160416">
 				<value name="Count" type="long" data="10"/>
-				<key name="Task1" modified="2016-04-29 09:13:16" build="160416">
+				<key name="Task1" modified="2020-05-28 11:10:27" build="191012">
 					<value name="Name" type="string" data="{Shells::cmd}"/>
-					<value name="Flags" type="dword" data="00000002"/>
+					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
 					<value name="Cmd1" type="string" data='cmd.exe /k "%ConEmuBaseDir%\CmdInit.cmd"'/>
@@ -624,9 +624,9 @@
 					<value name="Active" type="long" data="1"/>
 					<value name="Count" type="long" data="2"/>
 				</key>
-				<key name="Task5" modified="2016-04-29 09:13:16" build="160416">
+				<key name="Task5" modified="2020-05-28 11:10:27" build="191012">
 					<value name="Name" type="string" data="{Shells::PowerShell}"/>
-					<value name="Flags" type="dword" data="00000000"/>
+					<value name="Flags" type="dword" data="00000003"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
 					<value name="Cmd1" type="string" data="powershell.exe"/>
@@ -677,6 +677,14 @@
 					<value name="Cmd1" type="string" data='*cmd.exe /k Title Chocolatey &amp; "%ConEmuBaseDir%\Addons\ChocolateyAbout.cmd"'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
+				</key>
+				<key name="&lt;Startup&gt;" modified="2020-05-28 10:53:25" build="191012">
+					<value name="GuiArgs" type="string" data=""/>
+					<value name="Active" type="long" data="2"/>
+					<value name="Count" type="long" data="3"/>
+					<value name="Cmd1" type="string" data="* -cur_console:d:C:\Git\DevEnv-configuration powershell.exe"/>
+					<value name="Cmd2" type="string" data="&gt;* -cur_console:d:C:\Git\ad-internal-docs powershell.exe"/>
+					<value name="Cmd3" type="string" data='* -cur_console:d:C:\Users\asmyrnak -cur_console:u:"CERN\adasmy:" powershell.exe'/>
 				</key>
 			</key>
 			<key name="Apps" modified="2016-04-29 09:13:16" build="160416">
@@ -874,7 +882,7 @@
 			<value name="RestoreInactive" type="hex" data="00"/>
 			<value name="DynamicBufferHeight" type="hex" data="01"/>
 			<value name="AutoReloadEnvironment" type="hex" data="01"/>
-			<value name="AutoTrimSingleLine" type="hex" data="00"/>
+			<value name="AutoTrimSingleLine" type="hex" data="01"/>
 			<value name="UseAltGrayPlus" type="hex" data="01"/>
 			<value name="MouseDragWindow" type="hex" data="01"/>
 			<value name="StatusBar.Hide.InputGrouping" type="hex" data="00"/>
