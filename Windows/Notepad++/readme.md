@@ -1,0 +1,3 @@
+## Location
+
+%appdata%\Notepad++
