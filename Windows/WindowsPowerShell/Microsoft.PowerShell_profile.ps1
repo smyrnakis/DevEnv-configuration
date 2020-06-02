@@ -72,6 +72,41 @@ Set-Alias lsla ls-la
 function New-Item-File {
   param([string]$_)
   # New-Item -Itemtype File -Path $_ -Force
-  echo $null >> $_
+
+  # chcp 65001
+  # echo $null >> $_
+
+  Out-File -FilePath $_ -Encoding utf8 -Force -NoNewline -NoClobber
 }
 Set-Alias touch New-Item-File
+
+# get size of a directory
+function Size-Of {
+  #param([parameter(Mandatory=$true)][string]$_)
+  param($_)
+
+  $dirSize = (Get-ChildItem -Path $_ -Force -Recurse | Measure-Object -Sum Length | Select-Object Sum).Sum
+  switch ($dirSize) {
+	{$dirSize -lt 1000} {
+		Write-Host $dirSize B
+		break
+	}
+	{$dirSize -lt 1048576} {
+		Write-Host "$([math]::round($dirSize/1024,2)) KB"
+		break
+	}
+	{$dirSize -lt 1073741824} {
+		Write-Host "$([math]::round($dirSize/1024/1024,2)) MB"
+		break
+	}
+	{$dirSize -lt 1099511627776} {
+		Write-Host "$([math]::round($dirSize/1024/1024/1024,2)) GB"
+		break
+	}
+	default {
+		Write-Host "$([math]::round($dirSize/1024/1024/1024/1024,2)) TB"
+		break
+	}
+  }
+}
+Set-Alias sizeof Size-Of

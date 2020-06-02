@@ -110,7 +110,10 @@ choco install vim
 `:tabnew` creates a new tab<br>
 `gt` go to next tab<br>
 `gT` go to previous tab<br>
-`:tabo` close all other tabs besides the active one<br>
+`:tabo` close all other tabs besides the active one<br><br>
+
+`:setlocal spell` enable spell check
+`:set nospell` disable spell check
 
 * https://www.freecodecamp.org/news/7-vim-tips-that-changed-my-life/
 
@@ -158,3 +161,12 @@ alias.cm commit -m
 2) Use the gist ID `508d76ad7d54c9a1b6cbc3c1c71e7343`
 https://gist.github.com/smyrnakis/508d76ad7d54c9a1b6cbc3c1c71e7343
 3) Time and restarts of VS Code will be needed!
+
+<br>
+
+# Notepad++
+## Installation
+
+
+
+<br>
