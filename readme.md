@@ -12,19 +12,24 @@ Based on work and code from various projects:
 <br>
 
 # Terminal configuration
+
 ## > Windows
+
 ### Chocolatey
+
 ``` ps1
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 ```
 
 ### ConEmu & Windows Terminal
+
 ``` ps1
 choco install ConEmu
 choco install microsoft-windows-terminal
 ```
 
 ### Configure Powershell
+
 Installation of [posh-git](https://dahlbyk.github.io/posh-git/) and [oh-my-posh](https://pecigonzalo.github.io/Oh-My-Posh/).
 ``` ps1
 Install-Module posh-git -Scope CurrentUser
@@ -57,6 +62,7 @@ $DefaultUser = 'username'
 ```
 
 #### Configure Powershell PROFILE
+
 ``` ps1
 if (!(Test-Path -Path $PROFILE )) { New-Item -Type File -Path $PROFILE -Force }
 notepad $PROFILE
@@ -75,11 +81,13 @@ To reload Powershell profile, run:
 ```
 
 #### Configure ConEmu
+
 Settings --> Fonts : Meslo
 
 <br>
 
 ## > Mac
+
 ### iTerm2
 
 
@@ -88,7 +96,9 @@ https://github.com/zsh-users/zsh-autosuggestions
 <br>
 
 # VIM
+
 ## Installation
+
 ### > Windows
 
 ``` ps1
@@ -98,6 +108,7 @@ choco install vim
 ### > Mac
 
 ## Cheatsheet
+
 `w`: next word<br>
 `b`: previous word<br>
 `gg`: go to the top of the file<br>
@@ -128,7 +139,9 @@ choco install vim
 <br>
 
 # GIT
+
 ## Installation
+
 ### > Windows
 
 ### > Mac
@@ -151,12 +164,15 @@ alias.cm commit -m
 <br>
 
 # MS Visual Studio code
+
 ## Installation
+
 ### > Windows
 
 ### > Mac
 
 ## Settings sync
+
 1) Install the [Settings sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) plugin.
 2) Use the gist ID `508d76ad7d54c9a1b6cbc3c1c71e7343`
 https://gist.github.com/smyrnakis/508d76ad7d54c9a1b6cbc3c1c71e7343
@@ -165,6 +181,7 @@ https://gist.github.com/smyrnakis/508d76ad7d54c9a1b6cbc3c1c71e7343
 <br>
 
 # Notepad++
+
 ## Installation
 
 
