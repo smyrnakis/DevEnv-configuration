@@ -110,3 +110,11 @@ function Size-Of {
   }
 }
 Set-Alias sizeof Size-Of
+
+# get account's creation date
+function Get-WhenCreated {
+	param($_)
+
+	(Get-ADUser -Identity "$_" -Properties whenCreated).whenCreated
+}
+Set-Alias whenCreated Get-WhenCreated
