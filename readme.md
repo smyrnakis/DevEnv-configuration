@@ -155,7 +155,7 @@ choco install vim
 ### > Mac
 
 
-## Aliaces
+## Aliases
 ``` git
 alias.st status
 alias.lga log --all --decorate --oneline --graph
@@ -191,12 +191,13 @@ https://gist.github.com/smyrnakis/508d76ad7d54c9a1b6cbc3c1c71e7343
 Windows `%APPDATA%\Code\User\`
 macOS `$HOME/Library/Application Support/Code/User/`
 Linux `$HOME/.config/Code/User/`
-4) Time and restarts of VS Code will be needed!
 
-* Upload settings: Shift + Alt + U
-* Download settings: Shift + Alt + D
+* `Shift + Alt + U`: upload settings
+* `Shift + Alt + D`: download settings
 
-## Custome shortcuts
+*Restarts of VS Code will be needed!*
+
+## List of custom shortcuts
 
 * `Ctrl + Alt + t`: toggle panel
 * `Ctrl + Alt + n`: new terminal in current script's location
@@ -207,7 +208,6 @@ Linux `$HOME/.config/Code/User/`
 # Notepad++
 
 ## Installation
-
 
 
 <br>
