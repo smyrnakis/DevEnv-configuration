@@ -195,6 +195,7 @@ Location:
 * macOS `$HOME/Library/Application Support/Code/User/`
 * Linux `$HOME/.config/Code/User/`
 
+Manual upload/download of settings:
 
 * `Shift + Alt + U`: upload settings
 * `Shift + Alt + D`: download settings
