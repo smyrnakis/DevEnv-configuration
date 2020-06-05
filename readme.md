@@ -11,6 +11,14 @@ Based on work and code from various projects:
 
 <br>
 
+# Fonts
+
+## > Windows
+
+
+## > Mac
+
+
 # Terminal configuration
 
 ## > Windows
@@ -176,7 +184,23 @@ alias.cm commit -m
 1) Install the [Settings sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) plugin.
 2) Use the gist ID `508d76ad7d54c9a1b6cbc3c1c71e7343`
 https://gist.github.com/smyrnakis/508d76ad7d54c9a1b6cbc3c1c71e7343
-3) Time and restarts of VS Code will be needed!
+3) Configure `syncLocalSettings.json` file to use same `keybindings.json` across all Operating Systems:
+``` json
+"universalKeybindings": true,
+```
+Windows `%APPDATA%\Code\User\`
+macOS `$HOME/Library/Application Support/Code/User/`
+Linux `$HOME/.config/Code/User/`
+4) Time and restarts of VS Code will be needed!
+
+* Upload settings: Shift + Alt + U
+* Download settings: Shift + Alt + D
+
+## Custome shortcuts
+
+* `Ctrl + Alt + t`: toggle panel
+* `Ctrl + Alt + n`: new terminal in current script's location
+* `Ctrl + Alt + c`: change terminal's directory to current script's location
 
 <br>
 
