@@ -184,13 +184,17 @@ alias.cm commit -m
 1) Install the [Settings sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) plugin.
 2) Use the gist ID `508d76ad7d54c9a1b6cbc3c1c71e7343`
 https://gist.github.com/smyrnakis/508d76ad7d54c9a1b6cbc3c1c71e7343
-3) Configure `syncLocalSettings.json` file to use same `keybindings.json` across all Operating Systems:
+3) Configure `syncLocalSettings.json` file to use same `keybindings.json` across all operating systems:
+
 ``` json
 "universalKeybindings": true,
 ```
-Windows `%APPDATA%\Code\User\`
-macOS `$HOME/Library/Application Support/Code/User/`
-Linux `$HOME/.config/Code/User/`
+Location:
+
+* Windows `%APPDATA%\Code\User\`
+* macOS `$HOME/Library/Application Support/Code/User/`
+* Linux `$HOME/.config/Code/User/`
+
 
 * `Shift + Alt + U`: upload settings
 * `Shift + Alt + D`: download settings
