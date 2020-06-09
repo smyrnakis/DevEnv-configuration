@@ -4,7 +4,6 @@ Based on work and code from various projects:
 
 * https://github.com/JanDeDobbeleer/oh-my-posh
 * https://gist.github.com/JanDeDobbeleer/71c9f1361a562f337b855b75d7bbfd28
-* https://github.com/ryanoasis/nerd-fonts
 * https://github.com/ohmyzsh/ohmyzsh
 * https://medium.com/swlh/power-up-your-terminal-using-oh-my-zsh-iterm2-c5a03f73a9fb
 * https://medium.com/ayuth/iterm2-zsh-oh-my-zsh-the-most-power-full-of-terminal-on-macos-bdb2823fb04c
@@ -15,8 +14,11 @@ Based on work and code from various projects:
 
 ## > Windows
 
+https://github.com/ryanoasis/nerd-fonts
 
 ## > Mac
+
+https://github.com/Falkor/dotfiles/blob/master/fonts/SourceCodePro%2BPowerline%2BAwesome%2BRegular.ttf
 
 
 # Terminal configuration
@@ -97,6 +99,8 @@ Settings --> Fonts : Meslo
 ## > Mac
 
 ### iTerm2
+
+Config file location: `~/Library/Preferences/com.googlecode.iterm2.plist`
 
 
 https://github.com/zsh-users/zsh-autosuggestions
@@ -189,18 +193,19 @@ https://gist.github.com/smyrnakis/508d76ad7d54c9a1b6cbc3c1c71e7343
 ``` json
 "universalKeybindings": true,
 ```
-Location:
 
-* Windows `%APPDATA%\Code\User\`
-* macOS `$HOME/Library/Application Support/Code/User/`
-* Linux `$HOME/.config/Code/User/`
+Location of `syncLocalSettings.json`:
+
+* Windows: `%APPDATA%\Code\User\`
+* macOS: `$HOME/Library/Application Support/Code/User/`
+* Linux: `$HOME/.config/Code/User/`
 
 Manual upload/download of settings:
 
 * `Shift + Alt + U`: upload settings
 * `Shift + Alt + D`: download settings
 
-*Restarts of VS Code will be needed!*
+*Restarts of VS Code will be needed for the initial synchronisation!*
 
 ## List of custom shortcuts
 
