@@ -118,3 +118,13 @@ function Get-WhenCreated {
 	(Get-ADUser -Identity "$_" -Properties whenCreated).whenCreated
 }
 Set-Alias whenCreated Get-WhenCreated
+
+# print DFS to CERNBox migration logs
+function Get-Dfs2CernboxLog {
+	param($_)
+	$hostname = $_.split('#')[0]
+	$username = $_.split('#')[1]
+
+	Get-Content -Path "\\$hostname\C$\Users\$username\AppData\NICE CERNBox Migration\LOG_migration.txt"
+}
+Set-Alias migrationLog Get-Dfs2CernboxLog
