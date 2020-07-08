@@ -55,6 +55,12 @@ if (Test-Path($ChocolateyProfile)) {
 }
 
 # Aliases
+# print all aliases
+function print-aliases {
+	Write-Host "`n`tcdgit`t`t:`tcd C:\Git`n`tlsla`t`t:`tequivalent to ls -la`n`ttouch`t`t:`tequivalent to unix touch`n`tsizeof`t`t:`tprint size of directory`n`twhenCreated`t:`tprint AD account's creation date`n`tmigrationLog`t:`tprint DFS2CBOX migration log (hostname#username)`n"
+}
+Set-Alias aliases print-aliases
+
 # cd to C:\Git directory
 function Cd-Git {
   Set-Location -Path C:\Git
