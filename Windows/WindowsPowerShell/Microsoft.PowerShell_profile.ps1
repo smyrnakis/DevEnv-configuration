@@ -131,6 +131,6 @@ function Get-Dfs2CernboxLog {
 	$hostname = $_.split('#')[0]
 	$username = $_.split('#')[1]
 
-	Get-Content -Path "\\$hostname\C$\Users\$username\AppData\NICE CERNBox Migration\LOG_migration.txt"
+	Get-Content -Path "\\$hostname\C$\Users\$username\AppData\Local\NICE CERNBox Migration\LOG_migration.txt"
 }
 Set-Alias migrationLog Get-Dfs2CernboxLog
