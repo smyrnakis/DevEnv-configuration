@@ -57,7 +57,7 @@ if (Test-Path($ChocolateyProfile)) {
 # Aliases
 # print all aliases
 function print-aliases {
-	Write-Host "`n`tcdgit`t`t:`tcd C:\Git`n`tlsla`t`t:`tequivalent to ls -la`n`ttouch`t`t:`tequivalent to unix touch`n`tsizeof`t`t:`tprint size of directory`n`twhenCreated`t:`tprint AD account's creation date`n`tmigrationLog`t:`tprint DFS2CBOX migration log (hostname#username)`n"
+	Write-Host "`n`tcdgit`t`t:`tcd C:\Git`n`tll`t`t:`tequivalent to ls -la`n`ttouch`t`t:`tequivalent to unix touch`n`tsizeof`t`t:`tprint size of directory`n`twhenCreated`t:`tprint AD account's creation date`n`tmigrationLog`t:`tprint DFS2CBOX migration log (hostname#username)`n"
 }
 Set-Alias aliases print-aliases
 
@@ -72,7 +72,7 @@ function ls-la {
   param([string]$_)
   Get-ChildItem -Force $_
 }
-Set-Alias lsla ls-la
+Set-Alias ll ls-la
 
 # equivalent to unix 'touch'
 function New-Item-File {
