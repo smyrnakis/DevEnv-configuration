@@ -41,9 +41,23 @@
 
 
 # Importing modules
-Import-Module 'C:\tools\poshgit\dahlbyk-posh-git-9bda399\src\posh-git.psd1'
-Import-Module posh-git
-Import-Module oh-my-posh
+if (Get-Module -ListAvailable -Name posh-git) {
+	Import-Module posh-git
+}
+else {
+	Install-Module posh-git -Scope CurrentUser -Force -Verbose
+	Import-Module posh-git
+}
+if (Get-Module -ListAvailable -Name oh-my-posh) {
+	Import-Module oh-my-posh
+}
+else {
+	Install-Module oh-my-posh -Scope CurrentUser -Force -Verbose
+	Import-Module oh-my-posh
+}
+if ([System.Environment]::OSVersion.Platform -like 'Win32NT') {
+	Import-Module 'C:\tools\poshgit\dahlbyk-posh-git-9bda399\src\posh-git.psd1'
+}
 
 # Settings for oh-my-posh
 Set-Theme Paradox
