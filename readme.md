@@ -161,16 +161,16 @@ choco install vim
 
 ## Aliases
 ``` git
-alias.st status
-alias.lga log --all --decorate --oneline --graph
-alias.lg log --decorate --oneline --graph
-alias.lgg log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches
-alias.pom push origin master
-alias.poh push origin $(git rev-parse --abbrev-ref HEAD)
-alias.amn commit --amend --no-edit
-alias.am commit --amend
-alias.ca commit -am
-alias.cm commit -m
+git config --global alias.st 'status'
+git config --global alias.lga 'log --all --decorate --oneline --graph'
+git config --global alias.lg 'log --decorate --oneline --graph'
+git config --global alias.lgg 'log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches'
+git config --global alias.pom 'push origin master'
+git config --global alias.poh 'push origin $(git rev-parse --abbrev-ref HEAD)'
+git config --global alias.amn 'commit --amend --no-edit'
+git config --global alias.am 'commit --amend'
+git config --global alias.ca 'commit -am'
+git config --global alias.cm 'commit -m'
 ```
 
 <br>
