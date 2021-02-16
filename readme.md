@@ -126,7 +126,7 @@ choco install vim
 `gg`: go to the top of the file<br>
 `V`: visual mode<br>
 `G`: go to the bottom of the file<br>
-`ggVG`: select all
+`ggVG`: select all<br>
 `:%d`: delete every line<br>
 `=G`: fix indentation in all document (only if cursor is moved on top)<br>
 `S`: start writing on a line at correct indentation<br>
