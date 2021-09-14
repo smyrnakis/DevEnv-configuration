@@ -55,12 +55,13 @@ else {
 	Install-Module oh-my-posh -Scope CurrentUser -Force -Verbose
 	Import-Module oh-my-posh
 }
-if ([System.Environment]::OSVersion.Platform -like 'Win32NT') {
-	Import-Module 'C:\tools\poshgit\dahlbyk-posh-git-9bda399\src\posh-git.psd1'
-}
 
 # Settings for oh-my-posh
-Set-Theme Paradox
+# Set-PoshPrompt -Theme Paradox
+Set-PoshPrompt -Theme iterm2
+
+# For the item icons in 'ls' command
+Import-Module -Name Terminal-Icons
 
 # Chocolatey profile
 $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
@@ -68,10 +69,13 @@ if (Test-Path($ChocolateyProfile)) {
   Import-Module "$ChocolateyProfile"
 }
 
+# Location to start up in
+Set-Location C:\Git
+
 # Aliases
 # print all aliases
 function print-aliases {
-	Write-Host "`n`tcdgit`t`t:`tcd C:\Git`n`tll`t`t:`tequivalent to ls -la`n`ttouch`t`t:`tequivalent to unix touch`n`tsizeof`t`t:`tprint size of directory`n`twhenCreated`t:`tprint AD account's creation date`n`tmigrationLog`t:`tprint DFS2CBOX migration log (hostname#username)`n"
+	Write-Host "`n`tcdgit`t`t:`tcd C:\Git`n`tll`t`t:`tequivalent to ls -la`n`ttouch`t`t:`tequivalent to unix touch`n`tsizeof`t`t:`tprint size of directory`n"
 }
 Set-Alias aliases print-aliases
 
@@ -105,46 +109,33 @@ function Size-Of {
   #param([parameter(Mandatory=$true)][string]$_)
   param($_)
 
-  $dirSize = (Get-ChildItem -Path $_ -Force -Recurse | Measure-Object -Sum Length | Select-Object Sum).Sum
-  switch ($dirSize) {
-	{$dirSize -lt 1000} {
-		Write-Host $dirSize B
-		break
-	}
-	{$dirSize -lt 1048576} {
-		Write-Host "$([math]::round($dirSize/1024,2)) KB"
-		break
-	}
-	{$dirSize -lt 1073741824} {
-		Write-Host "$([math]::round($dirSize/1024/1024,2)) MB"
-		break
-	}
-	{$dirSize -lt 1099511627776} {
-		Write-Host "$([math]::round($dirSize/1024/1024/1024,2)) GB"
-		break
-	}
-	default {
-		Write-Host "$([math]::round($dirSize/1024/1024/1024/1024,2)) TB"
-		break
-	}
+  if (-not (Test-Path $_)) {
+	Write-Error "path not found"
+  }
+  else {
+	  $dirSize = (Get-ChildItem -Path $_ -Force -Recurse | Measure-Object -Sum Length | Select-Object Sum).Sum
+	  switch ($dirSize) {
+		{$dirSize -lt 1000} {
+			Write-Host $dirSize B
+			break
+		}
+		{$dirSize -lt 1048576} {
+			Write-Host "$([math]::round($dirSize/1024,2)) KB"
+			break
+		}
+		{$dirSize -lt 1073741824} {
+			Write-Host "$([math]::round($dirSize/1024/1024,2)) MB"
+			break
+		}
+		{$dirSize -lt 1099511627776} {
+			Write-Host "$([math]::round($dirSize/1024/1024/1024,2)) GB"
+			break
+		}
+		default {
+			Write-Host "$([math]::round($dirSize/1024/1024/1024/1024,2)) TB"
+			break
+		}
+	  }
   }
 }
 Set-Alias sizeof Size-Of
-
-# get account's creation date
-function Get-WhenCreated {
-	param($_)
-
-	(Get-ADUser -Identity "$_" -Properties whenCreated).whenCreated
-}
-Set-Alias whenCreated Get-WhenCreated
-
-# print DFS to CERNBox migration logs
-function Get-Dfs2CernboxLog {
-	param($_)
-	$hostname = $_.split('#')[0]
-	$username = $_.split('#')[1]
-
-	Get-Content -Path "\\$hostname\C$\Users\$username\AppData\Local\NICE CERNBox Migration\LOG_migration.txt"
-}
-Set-Alias migrationLog Get-Dfs2CernboxLog
