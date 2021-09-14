@@ -17,7 +17,9 @@ Install <a href="https://chocolatey.org/install" target="_blank">chocolatey</a> 
 
 In an *Administrator* PowerShell session type:
 
-`Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))`
+``` ps1
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+```
 
 <br>
 
@@ -59,12 +61,16 @@ choco install cmder
 
 `Right click / Ctrl + Shift + v` : Paste text 
 
+<br>
+
 ## ConEmu & Windows Terminal
 
 ``` ps1
 choco install ConEmu
 choco install microsoft-windows-terminal
 ```
+
+<br>
 
 ### Fonts
 
@@ -86,6 +92,8 @@ If not (`False`), create it using the command:
 New-Item -path $profile -type file –force
 ```
 
+<br>
+
 > Before moving forward you might need to allow the execution of PowerShell scripts.
 > 
 > To do so, execute `Set-ExecutionPolicy -ExecutionPolicy Unrestricted`
@@ -93,6 +101,8 @@ New-Item -path $profile -type file –force
 > It is recommended to restore the ExecutionPolicy in `Restricted` after you finish installing the tools!
 > 
 > More info <a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.1" target="_blank">about_Execution_Policies</a>
+
+<br>
 
 Installation of <a href="https://dahlbyk.github.io/posh-git/" target="_blank">posh-git</a> and <a href="https://pecigonzalo.github.io/Oh-My-Posh/" target="_blank">oh-my-posh</a>.
 
