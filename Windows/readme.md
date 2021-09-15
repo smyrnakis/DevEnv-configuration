@@ -156,7 +156,7 @@ In **Windows Terminal**, go to *Settings* and click on *Windows PowerShell* unde
 
 On *Font face* select the `Meslo` font. For *Font size* select `9`.
 
-![powershell-font](pics\ps-font.png)
+![powershell-font](pics/ps-font.png)
 
 <br>
 
@@ -285,6 +285,42 @@ In an **elevated** prompt, execute:
 
 ``` ps1
 choco install notepadplusplus.install
+```
+
+<br>
+
+# Python
+
+## Installation
+
+In an **elevated** prompt, execute:
+
+``` ps1
+choco install python --pre
+```
+
+<br>
+
+# MobaXterm
+
+## Installation
+
+In an **elevated** prompt, execute:
+
+``` ps1
+choco install mobaxterm
+```
+
+<br>
+
+# WinSCP
+
+## Installation
+
+In an **elevated** prompt, execute:
+
+``` ps1
+choco install winscp.install
 ```
 
 <br>
