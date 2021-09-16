@@ -219,6 +219,13 @@ In an **elevated** prompt, execute:
 choco install git.install
 ```
 
+## Configure user
+
+``` ps1
+git config --global user.name "<YOUR-NAME>"
+git config --global user.email "<YOUR-EMAIL>"
+```
+
 ## Aliases
 ``` ps1
 git config --global alias.st 'status'
