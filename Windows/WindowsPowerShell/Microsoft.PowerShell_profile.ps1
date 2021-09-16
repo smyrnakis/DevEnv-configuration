@@ -75,9 +75,26 @@ Set-Location C:\Git
 # Aliases
 # print all aliases
 function print-aliases {
-	Write-Host "`n`tcdgit`t`t:`tcd C:\Git`n`tll`t`t:`tequivalent to ls -la`n`ttouch`t`t:`tequivalent to unix touch`n`tsizeof`t`t:`tprint size of directory`n"
+	Write-Host "`n`tadminps`t`t:`topen a new Admin PowerShell session
+	`n`tadminterminal`t:`topen a new Admin Windows Terminal
+	`n`tcdgit`t`t:`tcd C:\Git
+	`n`tll`t`t:`tequivalent to ls -la
+	`n`ttouch`t`t:`tequivalent to unix touch
+	`n`tsizeof`t`t:`tprint size of directory`n"
 }
 Set-Alias aliases print-aliases
+
+# open a new Admin PowerShell session
+function ps-admin {
+  Start-Process -Verb RunAs powershell.exe
+}
+Set-Alias adminps ps-admin
+
+# open a new Admin Windows Terminal
+function terminal-admin {
+  powershell "Start-Process -Verb RunAs cmd.exe '/c start wt.exe'"
+}
+Set-Alias adminterminal terminal-admin
 
 # cd to C:\Git directory
 function Cd-Git {
