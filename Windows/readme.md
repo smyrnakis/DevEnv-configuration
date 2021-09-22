@@ -233,6 +233,42 @@ git config --global alias.ca 'commit -am'
 git config --global alias.cm 'commit -m'
 ```
 
+## SSH keys
+
+[Generate & add key to the SSH agent](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#)
+
+[Add SSH key to Github](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+
+### Create the SSH key
+
+Open **Git Bash** terminal and type:
+
+``` ps1
+ssh-keygen -t rsa -b 4096 -C "ssh_git"
+```
+
+When asked where to save the file, chose the directory and the name.
+
+``` git
+Enter file in which to save the key (/c/Users/{YOUR-USERNAME}/.ssh/id_rsa): /c/Users/{YOUR-USERNAME}/.ssh/ssh_git
+```
+
+### Add SSH key in SSH agent
+
+``` ps1
+eval "$(ssh-agent -s)"
+
+ssh-add ~/.ssh/ssh_git
+```
+
+### Add SSH key in Github
+
+``` ps1
+clip < ~/.ssh/ssh_git.pub
+```
+
+Go to Github *Settings --> SSH and GPG keys --> New SSH key* and paste the public key. Add a *title* and save it.
+
 <br>
 
 # MS Visual Studio code
