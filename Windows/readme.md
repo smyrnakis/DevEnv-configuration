@@ -332,6 +332,18 @@ choco install notepadplusplus.install
 
 <br>
 
+# Atom
+
+## Installation
+
+In an **elevated** prompt, execute:
+
+``` ps1
+choco install atom --pre 
+```
+
+<br>
+
 # Python
 
 ## Installation
