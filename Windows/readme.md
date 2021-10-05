@@ -276,6 +276,137 @@ clip < ~/.ssh/ssh_git.pub
 
 Go to Github *Settings --> SSH and GPG keys --> New SSH key* and paste the public key. Add a *title* and save it.
 
+**NOTE:** you might need to enable Windows SSH service and add the SSH keys. Instructions here: [Windows OpenSSH service](https://github.com/smyrnakis/DevEnv-configuration/tree/master/Windows#windows-openssh-service).
+
+### Multiple Git accounts & SSH keys
+
+*Related external article: "[Multiple repository and identities git configuration](https://gist.github.com/bgauduch/06a8c4ec2fec8fef6354afe94358c89e)".*
+
+Follow the steps bellow in order to be able to use simultaneously a Github and a Gitlab account on the same PC.
+
+Create all the needed SSH keys as explained in [Create the SSH key](https://github.com/smyrnakis/DevEnv-configuration/tree/master/Windows#create-the-ssh-key) and give them different names.
+
+Add your keys to the apropriate online account (github, gitlab etc) as explained in [Add SSH key in Github](https://github.com/smyrnakis/DevEnv-configuration/tree/master/Windows#add-ssh-key-in-github).
+
+<!-- <br> -->
+
+Create the `config` file under `~\.ssh` directory (if it doesn't exist already):
+
+``` ps1
+cd ~\.ssh
+Out-File -FilePath config -Encoding utf8 -Force -NoNewline -NoClobber
+```
+
+``` ps1
+vim ~\.ssh\config
+```
+
+Add the following content in your `config` file, changing the names when needed:
+
+``` bash
+# Personal GitHub.com
+Host github.com
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/id_github
+
+# Professional GitLab
+Host gitlab.com
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/id_gitlab
+```
+
+<!-- ``` bash
+Host github
+	HostName github.com
+	User git
+	IdentityFile ~/.ssh/id_github
+	IdentitiesOnly yes
+Host gitlab
+	Hostname gitlab.com
+	User git
+	IdentityFile ~/.ssh/id_gitlab
+	IdentitiesOnly yes
+``` -->
+
+**NOTE:** be sure that the `config` file is saved *without* BOM. If you get issues with the authentication, open the file with *Notepad++* and select *Encoding* --> *UTF-8* and then save the file.
+
+<!-- <br> -->
+
+Next, edit the `~\.gitconfig` file. 
+
+``` ps1
+vim ~\.gitconfig
+```
+
+Remove any `[user]` block that might exist and add the following:
+
+``` bash
+[includeIf "gitdir:C:/Git/personal/"]
+	path = .gitconfig_github
+[includeIf "gitdir:C:/Git/professional/"]
+	path = .gitconfig_gitlab
+```
+
+In the above example, we assume that Github is used for personal stuff and Gitlab for professional. We also assume the location of the personal Git folder to be `C:/Git/personal/` and the professional `C:/Git/professional/`.
+
+Next, create the `.gitconfig_github` and `.gitconfig_gitlab` files.
+
+``` ps1
+cd ~
+Out-File -FilePath .gitconfig_github -Encoding utf8 -Force -NoNewline -NoClobber
+Out-File -FilePath .gitconfig_gitlab -Encoding utf8 -Force -NoNewline -NoClobber
+```
+
+Edit them and add the `email` and `name` information. For our example, your *personal* email for Github and your *professional* email for Gitlab. The name should be the same! :p
+
+``` bash
+[user]
+	email = <YOUR-EMAIL>
+	name = <YOUR-NAME>
+```
+
+Replace your email & name accordingly.
+
+<!-- <br> -->
+
+### Windows `OpenSSH` service
+
+On Windows, OpenSSH might not be enabled by default.
+
+Click on **Start**, type `services.msc` and hit **Enter**.
+
+Find the service named `OpenSSH Authentication Agent` and double click on it.
+
+On the *Startup type* select **Automatic** and click on the **Start** button if the *Service status* is not "Running". Finally, click OK.
+
+<!-- <br> -->
+
+In an **elevated** prompt, execute:
+
+``` ps1
+ssh-add .\id_github
+ssh-add .\id_gitlab
+```
+
+<!-- <br> -->
+
+In order to test the SSH keys, open a prompt and navigate to your git folder. Try the following command on both the `personal` and `professional` subdirectories. If you see the message that you are *"successfully authenticated"* then it works fine.
+
+``` ps1 
+ssh -T git@github.com
+
+# or
+
+ssh -T git@gitlab.com
+```
+
+Possible outputs:
+```
+Welcome to GitLab, <USERNAME>!
+
+Hi <USERNAME> You've successfully authenticated, but GitHub does not provide shell access.
+```
+
 <br>
 
 # MS Visual Studio code
