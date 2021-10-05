@@ -278,6 +278,8 @@ Go to Github *Settings --> SSH and GPG keys --> New SSH key* and paste the publi
 
 **NOTE:** you might need to enable Windows SSH service and add the SSH keys. Instructions here: [Windows OpenSSH service](https://github.com/smyrnakis/DevEnv-configuration/tree/master/Windows#windows-openssh-service).
 
+<br>
+
 ### Multiple Git accounts & SSH keys
 
 *Related external article: "[Multiple repository and identities git configuration](https://gist.github.com/bgauduch/06a8c4ec2fec8fef6354afe94358c89e)".*
