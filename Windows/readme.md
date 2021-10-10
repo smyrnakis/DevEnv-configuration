@@ -243,6 +243,7 @@ git config --global alias.cm 'commit -m'
 ## SSH keys
 
 > Related articles	
+>  
 >  [Generate & add key to the SSH agent](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#)
 >  
 >  [Add SSH key to Github](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
@@ -286,7 +287,8 @@ Go to Github *Settings --> SSH and GPG keys --> New SSH key* and paste the publi
 ### Multiple Git accounts & SSH keys
 
 > Related article	
->  [Multiple repository and identities git configuration](https://gist.github.com/bgauduch/06a8c4ec2fec8fef6354afe94358c89e)"
+>  
+>  [Multiple repository and identities git configuration](https://gist.github.com/bgauduch/06a8c4ec2fec8fef6354afe94358c89e)
 >  
 
 Follow the steps bellow in order to be able to use simultaneously a Github and a Gitlab account on the same PC.
