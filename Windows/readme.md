@@ -393,6 +393,8 @@ On the *Startup type* select **Automatic** and click on the **Start** button if 
 In an **elevated** prompt, execute:
 
 ``` ps1
+cd ~\.ssh
+
 ssh-add .\id_github
 ssh-add .\id_gitlab
 ```
