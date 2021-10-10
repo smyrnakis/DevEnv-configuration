@@ -75,6 +75,7 @@ git config --global alias.lga 'log --all --decorate --oneline --graph'
 git config --global alias.lg 'log --decorate --oneline --graph'
 git config --global alias.lgg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches"
 git config --global alias.pom 'push origin master'
+git config --global alias.poma 'push origin main'
 git config --global alias.poh 'push origin $(git rev-parse --abbrev-ref HEAD)'
 git config --global alias.amn 'commit --amend --no-edit'
 git config --global alias.am 'commit --amend'
