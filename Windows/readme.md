@@ -1,13 +1,8 @@
-# Windows terminal configuration
+# Windows configuration
 
-Based on work and code from various projects:
-
-* https://github.com/JanDeDobbeleer/oh-my-posh
-* https://gist.github.com/JanDeDobbeleer/71c9f1361a562f337b855b75d7bbfd28
-* https://dejanstojanovic.net/powershell/2021/june/customizing-powershell-with-oh-my-posh-v3/
-* https://github.com/ohmyzsh/ohmyzsh
-* https://medium.com/swlh/power-up-your-terminal-using-oh-my-zsh-iterm2-c5a03f73a9fb
-* https://medium.com/ayuth/iterm2-zsh-oh-my-zsh-the-most-power-full-of-terminal-on-macos-bdb2823fb04c
+> :information: **INFO**
+> 
+> Most of the steps described bellow can execute automatically using the **[magic-configurator.ps1](https://github.com/smyrnakis/DevEnv-configuration/tree/master/Windows/magic-configurator/)** script.
 
 <br>
 
@@ -287,11 +282,6 @@ Go to Github *Settings --> SSH and GPG keys --> New SSH key* and paste the publi
 
 ### Multiple Git accounts & SSH keys
 
-> Related article	
->  
->  [Multiple repository and identities git configuration](https://gist.github.com/bgauduch/06a8c4ec2fec8fef6354afe94358c89e)
->  
-
 Follow the steps bellow in order to be able to use simultaneously a Github and a Gitlab account on the same PC.
 
 Create all the needed SSH keys as explained in [Create the SSH key](https://github.com/smyrnakis/DevEnv-configuration/tree/master/Windows#create-the-ssh-key) and give them different names.
@@ -522,3 +512,15 @@ choco install winscp.install
 ```
 
 <br>
+
+## Bibliography
+
+* https://github.com/JanDeDobbeleer/oh-my-posh
+* https://gist.github.com/JanDeDobbeleer/71c9f1361a562f337b855b75d7bbfd28
+* https://dejanstojanovic.net/powershell/2021/june/customizing-powershell-with-oh-my-posh-v3/
+* https://github.com/ohmyzsh/ohmyzsh
+* https://medium.com/swlh/power-up-your-terminal-using-oh-my-zsh-iterm2-c5a03f73a9fb
+* https://medium.com/ayuth/iterm2-zsh-oh-my-zsh-the-most-power-full-of-terminal-on-macos-bdb2823fb04c
+* https://dahlbyk.github.io/posh-git/
+* https://pecigonzalo.github.io/Oh-My-Posh/
+* [Multiple repository and identities git configuration](https://gist.github.com/bgauduch/06a8c4ec2fec8fef6354afe94358c89e)
