@@ -39,7 +39,7 @@ choco install cmder
 
 `Win + Alt + p` : Preferences (Or right click on title bar)
 
-`Ctrl + t` : New tab dialog (maybe you want to open cmd as admin?)
+`Ctrl + t` : New tab dialogue (maybe you want to open cmd as admin?)
 
 `Ctrl + w` : Close tab
 
@@ -256,13 +256,13 @@ git config --global alias.cm 'commit -m'
 Open **Git Bash** terminal and type:
 
 ``` ps1
-ssh-keygen -t rsa -b 4096 -C "ssh_git"
+ssh-keygen -t rsa -b 4096 -C "id_github"
 ```
 
 When asked where to save the file, chose the directory and the name.
 
 ``` git
-Enter file in which to save the key (/c/Users/{YOUR-USERNAME}/.ssh/id_rsa): /c/Users/{YOUR-USERNAME}/.ssh/ssh_git
+Enter file in which to save the key (/c/Users/{YOUR-USERNAME}/.ssh/id_rsa): /c/Users/{YOUR-USERNAME}/.ssh/id_github
 ```
 
 ### Add SSH key in SSH agent
@@ -270,13 +270,13 @@ Enter file in which to save the key (/c/Users/{YOUR-USERNAME}/.ssh/id_rsa): /c/U
 ``` ps1
 eval "$(ssh-agent -s)"
 
-ssh-add ~/.ssh/ssh_git
+ssh-add ~/.ssh/id_github
 ```
 
 ### Add SSH key in Github
 
 ``` ps1
-clip < ~/.ssh/ssh_git.pub
+clip < ~/.ssh/id_github.pub
 ```
 
 Go to Github *Settings --> SSH and GPG keys --> New SSH key* and paste the public key. Add a *title* and save it.
@@ -296,7 +296,7 @@ Follow the steps bellow in order to be able to use simultaneously a Github and a
 
 Create all the needed SSH keys as explained in [Create the SSH key](https://github.com/smyrnakis/DevEnv-configuration/tree/master/Windows#create-the-ssh-key) and give them different names.
 
-Add your keys to the apropriate online account (github, gitlab etc) as explained in [Add SSH key in Github](https://github.com/smyrnakis/DevEnv-configuration/tree/master/Windows#add-ssh-key-in-github).
+Add your keys to the appropriate online account (github, gitlab etc) as explained in [Add SSH key in Github](https://github.com/smyrnakis/DevEnv-configuration/tree/master/Windows#add-ssh-key-in-github).
 
 <br>
 
