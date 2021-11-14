@@ -1,5 +1,7 @@
 # Windows configuration
 
+<br>
+
 > :information_source: **INFO**
 > 
 > Most of the steps described bellow can execute automatically using the **[magic-configurator.ps1](https://github.com/smyrnakis/DevEnv-configuration/tree/master/Windows/magic-configurator/)** script.

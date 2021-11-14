@@ -29,6 +29,7 @@ After installing `choco`, the following packages are installed:
     - openvpn-connect
     - keepassxc
     - lightshot
+    - onlyoffice
     - **spotify**
 - development software
     - notepadplusplus.install

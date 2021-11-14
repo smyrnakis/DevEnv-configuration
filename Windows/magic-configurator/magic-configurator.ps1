@@ -291,6 +291,7 @@ $StandardPackages = 'googlechrome',
 					'openvpn-connect',
 					'keepassxc',
 					'lightshot',
+					'onlyoffice',
 					'spotify'
  
 if (!Test-Path -Path "$env:ProgramData\Chocolatey") {
