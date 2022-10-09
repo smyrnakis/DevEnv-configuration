@@ -62,10 +62,12 @@ Set-ExecutionPolicy Unrestricted -Force
 Import-Module PowerShellGet -Scope AllUsers -Force
 
 Install-Module posh-git -Scope AllUsers -Force
-Install-Module oh-my-posh -Scope AllUsers -Force
+#Install-Module oh-my-posh -Scope AllUsers -Force
+winget install JanDeDobbeleer.OhMyPosh -s winget
 
-Set-PoshPrompt
-Set-PoshPrompt -Theme iterm2
+#Set-PoshPrompt
+#Set-PoshPrompt -Theme iterm2
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\iterm2.omp.json" | Invoke-Expression
 
 Install-Module -Name Terminal-Icons -Repository PSGallery -Scope AllUsers -Force
 
