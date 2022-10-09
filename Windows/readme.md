@@ -24,7 +24,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 
 ## cmder
 
-Install <a href="https://cmder.net/" target="_blank">cmder</a> using *choco*:
+Install <a href="https://cmder.app/" target="_blank">cmder</a> using *choco*:
 
 ``` ps1
 choco install cmder
@@ -93,7 +93,7 @@ New-Item -path $profile -type file –force
 
 > Before moving forward you might need to allow the execution of PowerShell scripts.
 > 
-> To do so, execute `Set-ExecutionPolicy -ExecutionPolicy Unrestricted`
+> To do so, execute `Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser`
 > 
 > It is recommended to restore the ExecutionPolicy in `Restricted` after you finish installing the tools!
 > 
@@ -101,16 +101,32 @@ New-Item -path $profile -type file –force
 
 <br>
 
-Installation of <a href="https://dahlbyk.github.io/posh-git/" target="_blank">posh-git</a> and <a href="https://pecigonzalo.github.io/Oh-My-Posh/" target="_blank">oh-my-posh</a>.
+Installation of <a href="https://dahlbyk.github.io/posh-git/" target="_blank">posh-git</a> and <a href="https://ohmyposh.dev/" target="_blank">oh-my-posh</a>.
 
 ``` ps1
 Install-Module posh-git -Scope CurrentUser
-Install-Module oh-my-posh -Scope CurrentUser
 ```
 
 ``` ps1
-Set-PoshPrompt
-Set-PoshPrompt -Theme iterm2
+# Install-Module oh-my-posh -Scope CurrentUser
+# Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://ohmyposh.dev/install.ps1'))
+winget install JanDeDobbeleer.OhMyPosh -s winget
+```
+
+To update already installed modules:
+
+``` ps1
+Update-Module posh-git
+# Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://ohmyposh.dev/install.ps1'))
+winget upgrade JanDeDobbeleer.OhMyPosh -s winget
+```
+
+<br>
+
+``` ps1
+# Set-PoshPrompt
+# Set-PoshPrompt -Theme iterm2
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\iterm2.omp.json" | Invoke-Expression
 ```
 
 To see the available list of themes, type:
