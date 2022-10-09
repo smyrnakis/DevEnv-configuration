@@ -48,6 +48,7 @@ else {
 	Install-Module posh-git -Scope CurrentUser -Force -Verbose
 	Import-Module posh-git
 }
+<#
 if (Get-Module -ListAvailable -Name oh-my-posh) {
 	Import-Module oh-my-posh
 }
@@ -55,10 +56,12 @@ else {
 	Install-Module oh-my-posh -Scope CurrentUser -Force -Verbose
 	Import-Module oh-my-posh
 }
+#>
 
 # Settings for oh-my-posh
 # Set-PoshPrompt -Theme Paradox
-Set-PoshPrompt -Theme iterm2
+# Set-PoshPrompt -Theme iterm2
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\iterm2.omp.json" | Invoke-Expression
 
 # For the item icons in 'ls' command
 Import-Module -Name Terminal-Icons
